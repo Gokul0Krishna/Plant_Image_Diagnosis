@@ -1,0 +1,46 @@
+Project 2: YieldVision - Satellite Imagery Analytics with Predictive Modeling
+Description
+
+Web platform leveraging free satellite imagery for crop monitoring and yield prediction
+Uses time-series analysis of NDVI, weather patterns, and historical data
+Generates AI-powered insights and harvest optimization recommendations
+
+Functional Requirements
+
+Field boundary drawing on interactive map interface
+Automated satellite image retrieval and processing (Sentinel-2, Landsat)
+Time-series vegetation index calculation (NDVI, EVI, SAVI, NDMI)
+Crop type classification using supervised ML models
+Yield prediction using ensemble models (Random Forest, XGBoost, LightGBM)
+Anomaly detection for crop stress, pest infestation, waterlogging
+Weather data integration (rainfall, temperature, humidity forecasts)
+Comparative analysis with neighboring farms
+Interactive dashboards with trend visualization
+Downloadable reports with recommendations
+Alert system for critical crop health changes
+Historical performance tracking (multi-season)
+Generative AI summaries explaining technical metrics in simple language
+
+Non-Functional Requirements
+
+Satellite image processing time < 3 minutes per 100 acres
+Yield prediction accuracy within ±12% margin
+Map interface load time < 2 seconds
+Support for field sizes 1-1000 acres
+Data refresh frequency: every 5 days (Sentinel-2 revisit time)
+Dashboard visualization rendering < 1 second
+Scalability for 100K+ registered farms
+Historical data retention: 5 years
+Browser compatibility: Chrome, Firefox, Safari, Edge
+Mobile responsive design
+
+Available Resources
+
+Satellite Data: Google Earth Engine, Sentinel Hub, Copernicus Open Access Hub, NASA EARTHDATA
+ML Libraries: Scikit-learn, XGBoost, LightGBM, TensorFlow, PyTorch
+Geospatial Tools: GeoPandas, Rasterio, GDAL, Folium, Leaflet.js
+Weather APIs: OpenWeatherMap, Visual Crossing, IMD (India Meteorological Department)
+Cloud Platforms: Google Earth Engine (free tier), AWS, Google Cloud
+Frameworks: Python (FastAPI/Django), React.js, D3.js for visualization
+Datasets: Sentinel-2 L2A, Landsat 8/9, MODIS, Historical yield data from government portals
+Databases: PostgreSQL with PostGIS extension, TimescaleDB
