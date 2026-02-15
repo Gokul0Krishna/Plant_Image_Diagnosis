@@ -1,0 +1,6 @@
+pdf: https://www.manage.gov.in/publications/farmerbook.pdf
+
+data_prep = used claude to convert chunks to questions json
+
+model: TinyLlama
+
