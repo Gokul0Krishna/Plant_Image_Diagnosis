@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 class Llm():
 
     def __init__(self):
+        'fine tuned tinyLLama model'
         load_dotenv()
 
         self.base_model = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
@@ -19,7 +20,7 @@ class Llm():
         self._loadmodel()
     
     def _loadmodel(self):
-
+        'loads all the dependency for the model'
         self.model = AutoModelForCausalLM.from_pretrained(
             self.base_model,
             torch_dtype=torch.float16,
