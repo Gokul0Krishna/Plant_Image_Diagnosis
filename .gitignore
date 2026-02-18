@@ -3,3 +3,4 @@ backend/app/model/leaf_model.weights.h5
 backend/app/__pycache__
 venv
 backend/app/model/Agri_llama
+backend/app/model/best (1).pt
