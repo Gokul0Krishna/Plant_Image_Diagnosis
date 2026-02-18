@@ -13,4 +13,11 @@ q&a json : https://www.kaggle.com/datasets/gabriellaamorim/gardening-q-and-a/dat
 used colab for fine tuning TinyLlama
 
 
+working
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|█████████████████████████████████████████████████████████████████| 201/201 [00:02<00:00, 98.82it/s, Materializing param=model.norm.weight]
+<|user|>
+What disease affects rice leaves?
+<|assistant|>
+Rice leaves are susceptible to diseases such as brown spot, powdery mildew, and rust.
 
