@@ -4,14 +4,14 @@ from ultralytics import YOLO
 import numpy as np
 class Vision_model():
     def __init__(self):
-        'An image classification CNN model'
+        'An image classification YOLO model'
         load_dotenv()
         model_path = os.get_env('video_model_path')
-
-    def run(self,image_array) -> str:
+        self.model = YOLO(model_path)
+    def run(self,image) -> str:
         '''
-        input: array of the image
+        input: image
         output: the class to which the image has been classified to
         '''
-        res = self.model.predict(image_array)
-        return self.class_list[np.argmax(res)]
+        res = self.model(image)
+        return res
