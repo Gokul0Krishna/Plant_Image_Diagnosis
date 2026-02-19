@@ -20,7 +20,7 @@ class Llm():
         self._loadmodel()
     
     def _loadmodel(self):
-        'loads all the dependency for the model'
+        'loads all the dependency for the model'    
         self.model = AutoModelForCausalLM.from_pretrained(
             self.base_model,
             torch_dtype=torch.float16,

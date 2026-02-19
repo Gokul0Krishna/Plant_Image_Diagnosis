@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
+
 class Image_processing():
     def __init__(self):
 
