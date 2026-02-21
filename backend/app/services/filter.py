@@ -7,12 +7,15 @@ class Filter_my_data:
     def filter(self,data):
         '''
         input: api output
-        output: list containing temperature_2m_max,temperature_2m_min and elevation 
+        output: json containing temperature_2m_max,temperature_2m_min and elevation 
         '''
         elevation = data['elevation']
         temperature_2m_max = data['daily']['temperature_2m_max']
         temperature_2m_min = data['daily']['temperature_2m_min']
-        return [temperature_2m_max,temperature_2m_min,elevation]
+        return {'temperature_2m_max':temperature_2m_max,
+                "temperature_2m_min":temperature_2m_min,
+                "elevation":elevation
+                }
 
 
 if __name__ == "__main__":

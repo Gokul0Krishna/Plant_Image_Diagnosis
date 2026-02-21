@@ -9,3 +9,4 @@ backend/app/__pycache__
 backend/app/services/__pycache__
 backend/test.ipynb
 .vscode
+backend/app/img/result.jpg
