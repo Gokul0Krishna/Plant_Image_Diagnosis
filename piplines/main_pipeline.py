@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from prefect import task, flow
 from backend.app.services import Loc_api,Weather_Data
+
 
 @task
 def get_weather():
