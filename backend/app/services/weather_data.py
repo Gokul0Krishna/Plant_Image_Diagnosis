@@ -17,7 +17,8 @@ class Weather_Data():
         params = {
         "latitude": lat,
         "longitude": long,
-        "past_days": past_days 
+        "past_days": past_days,
+        "daily": "temperature_2m_max,temperature_2m_min,sunrise" 
         }
         response = requests.get(self.url, params=params)
         return response.json()
@@ -33,7 +34,8 @@ class Weather_Data():
         params = {
         "latitude": lat,
         "longitude": long,
-        "forecast_days": forecast_days
+        "forecast_days": forecast_days,
+        "daily": "temperature_2m_max,temperature_2m_min,sunrise"
         }
         response = requests.get(self.url, params=params)
         return response.json()
@@ -49,4 +51,4 @@ class Weather_Data():
 
 if __name__ == "__main__":
     obj = Weather_Data()
-    print(obj.getdata())
+    print(obj.getdata(loc=[52.52, 13.41]))

@@ -7,4 +7,5 @@ backend/app/model/best (1).pt
 backend/__pycache__
 backend/app/__pycache__
 backend/app/services/__pycache__
+backend/test.ipynb
 .vscode
