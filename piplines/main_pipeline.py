@@ -14,8 +14,11 @@ def get_weather():
     past,future = obj2.getdata(loc=loc)
     past_data = filt.filter(past)
     future_data = filt.filter(future)
-    print(past_data,future_data)
+    return past_data,future_data
 
+@task
+def image_process(Image):
+    pass
 
 
 @flow
