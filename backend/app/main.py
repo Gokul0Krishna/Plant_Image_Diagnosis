@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import requests
 
 load_dotenv()
-AIRFLOW_TRIGGER_URL = os.getenv('airflow_trigger_ur')
+
 
 app = FastAPI()
 

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "private"
+version = "0.1.0"
+description = "Gardening AI Pipeline Project"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["venv*", "docs*"]
