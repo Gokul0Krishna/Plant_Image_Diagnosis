@@ -58,8 +58,8 @@ Each stage is modular and independently testable.
 
 - Python 3.10+
 - OpenCV
-- Ultralytics YOLO (if using .pt model)
-- TensorFlow / Keras (if using .h5 model)
+- Ultralytics YOLO 
+- TensorFlow / Keras 
 - NumPy
 - python-dotenv
 
