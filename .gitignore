@@ -1,4 +1,3 @@
-backend/.env
 backend/app/model/leaf_model.weights.h5
 backend/app/__pycache__
 venv
