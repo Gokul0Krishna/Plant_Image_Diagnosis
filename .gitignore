@@ -11,3 +11,4 @@ backend/test.ipynb
 .vscode
 backend/app/img/result.jpg
 private.egg-info
+piplines/__pycache__

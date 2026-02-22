@@ -1,27 +1,36 @@
-from fastapi import FastAPI, UploadFile, File
 import os
 from dotenv import load_dotenv
-import requests
+from fastapi.staticfiles import StaticFiles
 
 load_dotenv()
 
+from fastapi import FastAPI
+from pydantic import BaseModel
+from pipelines import main_line
 
 app = FastAPI()
 
-UPLOAD_FOLDER = "uploaded_images"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
- 
+class ImagePathRequest(BaseModel):
+    file_path: str
 
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
+
+app.mount(
+    "/images",
+    StaticFiles(directory="app/img"), 
+    name="images"
+)
+
+
 @app.post("/upload-image")
-async def upload_image(file: UploadFile = File(...)):
-    file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-    requests.post(
-        AIRFLOW_TRIGGER_URL,
-        json={"conf": {"image_path": file_path}},
-        auth=("airflow", "airflow")
-    )
+async def upload_image(request: ImagePathRequest):
+    result = main_line(request.file_path)
+    return {
+        "status": "success",
+        "pipeline_output": result,
+        "image_url": "/images/result.jpg"
+    }
+
