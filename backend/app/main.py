@@ -20,7 +20,7 @@ async def root():
 
 app.mount(
     "/images",
-    StaticFiles(directory="app/img"), 
+    StaticFiles(directory="backend/app/img"), 
     name="images"
 )
 
