@@ -1,8 +1,7 @@
 # 🌿 Intelligent Plant Disease Analysis Pipeline
 
-A production-grade, modular computer vision pipeline for plant disease detection and environmental risk analysis.
-
-This project implements a fully structured ML pipeline designed for scalability, maintainability, and real-world agricultural deployment scenarios.
+>A production-grade, modular computer vision pipeline for plant disease detection and environmental risk analysis.
+>This project implements a fully structured ML pipeline designed for scalability, maintainability, and real-world agricultural deployment scenarios.
 
 ---
 
